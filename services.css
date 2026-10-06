@@ -1,0 +1,42 @@
+.shero{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;padding:130px max(24px,6vw) 70px;min-height:70vh}
+.shero h1{font-size:clamp(2.4rem,4.8vw,3.9rem)}
+.shero .lead{margin-bottom:28px}
+.pills{display:grid;gap:12px;max-width:340px;justify-self:end;width:100%}
+.pills .card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;padding:14px 18px;border-radius:14px}
+.pills i{grid-row:span 2;font-style:normal;font-size:1.4rem;color:var(--red);align-self:center}
+.pills small{color:var(--muted);font-size:.75rem}
+.intro{max-width:34em;font-size:.92rem}
+.svc{padding:0 22px 26px;overflow:hidden}
+.svc-img{height:150px;margin:0 -22px;background:linear-gradient(135deg,#3a2217,#8a4a2c)}
+.svc-img.i2{background:radial-gradient(circle at 70% 40%,#c9964f 0 22px,transparent 23px),radial-gradient(circle at 40% 55%,#8b6a3a 0 34px,transparent 35px),linear-gradient(135deg,#2a1812,#5a3a22)}
+.svc-img.i3{background:radial-gradient(circle at 55% 45%,rgba(255,170,70,.8),transparent 45%),linear-gradient(135deg,#1a0f0b,#4a2a18)}
+.svc-img.i1{background:repeating-linear-gradient(90deg,transparent 0 22px,rgba(255,255,255,.14) 22px 34px),linear-gradient(135deg,#4a2a1a,#c07a4a)}
+.svc-img.i4{background:linear-gradient(135deg,#2a1812,#7a4a30)}
+.badge{position:relative;margin:-26px 0 12px;width:50px;height:50px;border-radius:14px;background:#fff;display:grid;place-items:center;font-size:1.4rem;box-shadow:0 10px 20px -10px rgba(0,0,0,.5)}
+.svc ul{list-style:none;padding:0;margin:0 0 18px;font-size:.82rem;display:grid;gap:6px}
+.svc li:before{content:"◆";color:var(--red);font-size:.6rem;margin-right:8px}
+.svc:nth-child(n+3) li:before{color:#1f7a45}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.steps .card{background:#2a1a13;color:#e9dccd;counter-increment:s;position:relative;padding:34px 24px 24px;font-size:.88rem}
+.steps .card:before{content:counter(s,decimal-leading-zero);position:absolute;top:-14px;left:20px;background:var(--red);color:#fff;font:600 .8rem var(--sans);width:34px;height:34px;border-radius:50%;display:grid;place-items:center}
+.steps b{display:block;font:600 1.15rem var(--serif);color:#fff;margin-bottom:6px}
+.tools2{display:grid;grid-template-columns:1fr 2.4fr;gap:30px;align-items:center}
+.tgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.tgrid .card{padding:18px 8px;text-align:center;font-size:.8rem;display:grid;gap:8px;justify-items:center}
+.tgrid i{font:700 .8rem var(--sans);font-style:normal;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:#fff}
+.feat{display:grid;grid-template-columns:1fr 1.2fr .8fr;gap:30px;align-items:center}
+.feat .lead{margin:16px 0 24px}
+.laptop{background:#f4ece3;border:6px solid #111;border-radius:12px;padding:14px;color:var(--ink);box-shadow:0 30px 50px -20px #000}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}.kpis b{background:#fff;border-radius:8px;padding:6px;font-size:.8rem;text-align:center}.kpis small{display:block;font-weight:400;color:var(--muted);font-size:.6rem}
+.laptop .bars{height:110px}.laptop .bars span{background:#2d7fd1}
+.list p{margin:0 0 14px}.list p:last-child{margin:0}.list b{display:block}.list small{color:var(--muted)}
+.faq{display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:40px;align-items:start}
+.qs details{border-bottom:1px solid #e0cfbf;padding:14px 0}
+.qs summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;font-size:.95rem}
+.qs summary::-webkit-details-marker{display:none}
+.qs summary:after{content:"+";color:var(--red);font-size:1.3rem;line-height:1;transition:transform .3s}
+.qs details[open] summary:after{transform:rotate(45deg)}
+.qs details p{margin:10px 0 0;font-size:.88rem;color:var(--muted);animation:up .4s both}
+.ask p{margin:8px 0 16px}
+@media(max-width:1000px){.shero,.tools2,.feat,.faq{grid-template-columns:1fr}.pills{justify-self:start}.steps{grid-template-columns:1fr 1fr;row-gap:28px}.tgrid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:760px){.steps{grid-template-columns:1fr}.tgrid{grid-template-columns:repeat(2,1fr)}}
