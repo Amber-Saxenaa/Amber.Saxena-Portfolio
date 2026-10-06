@@ -30,7 +30,7 @@ em{font-style:normal;color:var(--red2)}
 .burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}.burger i{display:block;height:2px;background:#f3e8dd;margin:7px 8px}
 /* hero */
 .hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr;gap:20px;padding:130px max(24px,6vw) 120px;align-items:center}
-.hero-copy>*{opacity:0;transform:translateY(18px)}.ready .hero-copy>*{animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+.js .hero-copy>*{opacity:0;transform:translateY(18px)}.ready .hero-copy>*{animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
 .ready .hero-copy>:nth-child(2){animation-delay:.1s}.ready .hero-copy>:nth-child(3){animation-delay:.22s}.ready .hero-copy>:nth-child(4){animation-delay:.34s}.ready .hero-copy>:nth-child(5){animation-delay:.46s}
 @keyframes up{to{opacity:1;transform:none}}
 .no-js .hero-copy>*{opacity:1}
@@ -98,4 +98,4 @@ blockquote em{margin-left:auto;color:#e0a000;letter-spacing:1px}
 @media(max-width:1000px){.grid4{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr;padding-bottom:200px}.hero-art{min-height:460px}.proc{grid-template-columns:1fr}.cta{grid-template-columns:1fr}.mug{justify-self:start;margin-top:60px}.stats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.burger{display:block}.links{position:fixed;inset:64px 0 auto;flex-direction:column;align-items:flex-start;gap:16px;padding:24px;background:var(--ink);transform:translateY(-130%);transition:transform .35s}.links.open{transform:none}
 .grid3,.grid4{grid-template-columns:1fr}.proc ol{grid-template-columns:1fr 1fr;row-gap:28px}.proc ol:before{display:none}.float{width:160px}.f2{top:130px}.f3{top:240px}.tools{position:static;margin-top:30px}.hero{padding-bottom:60px}.hero-art .h1{display:none}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero-copy>*{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .hero-copy>*{opacity:1;transform:none}}
